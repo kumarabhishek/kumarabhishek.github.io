@@ -1,0 +1,271 @@
+@font-face {
+  font-family: 'ka';
+  font-style: normal;
+  font-weight: 300;
+  src:url('../fonts/DejaVuSansCondensed.ttf');
+}
+html, body{margin:0;padding:0;height:100%;}
+body{
+    font-family: "ka", Arial, Helvetica, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:#FFF;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+a{text-decoration: none;}
+h1, h2, h3, h4, h5{padding:0;margin:0;}
+.center{text-align: center;}
+.flex{display: flex;}
+.flex_1{flex:1;}
+.flex_c{flex-direction: column;}
+.aic{align-items: center;}
+.afc{align-self: center;}
+.bold{font-weight: bold;}
+.jcc{justify-content: center;}
+.jcsb{justify-content: space-between;}
+.bc_lb{background-color: #13bee2;background-color: #1693ad;}
+.c_b{color: #03264e;}
+.bc_lg{background-color: #13e28a;}
+.bc_lb{background-color: #13e28a;}
+.mr_0_5r{margin-right:0.5rem;}
+#landing{
+    margin-bottom:1rem;
+}
+#landing, #explore{
+opacity:0;
+visibility: hidden;
+transition: opacity 1s ease;
+display:none;
+}
+#landing.active, #explore.active{
+visibility: visible;
+opacity: 1;
+display:flex;
+}
+#landing h3{
+    margin:1rem 0 0 0;    font-weight: normal;
+}
+#landing .button{
+    font-size: 1rem;
+    color:#FFF;
+    padding:0.5rem;
+    margin:4rem 0;
+}
+#download, #download:visited, #landing .button{background-color: #0fc176;}
+#download:hover, #landing .button:hover{background-color: #13e28a;}
+section h3{display:flex;}
+section h3 span{margin-right:0.5rem;}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-0rem);}
+    60% {transform: translateY(0.5rem);}
+} 
+
+.bouncing{
+    animation: bounce 1s ease infinite;
+}
+#landing .button span:last-child{
+    margin-left:0.5rem;
+}
+.square.large{margin-bottom:0.5rem;min-height:9.5rem;
+    padding:2rem;width:auto;margin-right:0;;}
+.square.large .poster{width:15rem;height:15rem;margin-bottom:2rem;}
+.square.large a{font-size: 2rem;}
+.name, .name:hover{color:#FFF;font-size:1.6rem;}
+.email{font-size:0.8rem;margin-top:0.4rem;color:#000;}
+.h_5rem{height:5rem;}
+
+#lctr{
+    background: #003646;
+    background: #1693ad;
+    background: url(texture.jpg) no-repeat;
+    background-size: cover;
+    position:fixed;
+    top:0;
+    width: 100%;
+    height:80px;
+}
+#lctr.active{
+    visibility: visible;
+    opacity: 1;
+}
+#lctr ul, #lctr li, footer li, #experience content >ul, #experience content >li1{list-style: none;padding:0;margin: 0;}
+#experience content >ul >li{padding:1rem 0;}
+#experience content >ul >li ul{margin:0.5rem 0;}
+#experience content >ul >li li{list-style: disc;}
+#lctr ul,{margin: 0;}
+#lctr li{
+    display: flex;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+
+#lctr a, #lctr a:visited{
+    color:#FFF;
+}
+#lctr li a{
+    padding: 0.5rem;
+    flex:1;
+    transition: background-color 0.5s ease;
+}
+#lctr li a.active, #lctr li a:hover{
+    background-color: #076d86;
+}
+
+.square{
+    background: #13bee2;
+    background: #1693ad;
+    background: url(texture.jpg) no-repeat;
+    background-size: cover;
+    width:80px;
+    margin-right:1rem;
+}
+.poster{
+    width:80px;
+    height:80px;
+    box-sizing: border-box;
+    background: url(pic.jpg) no-repeat;
+    background-size: cover;
+}
+#lctr .square a{color:#003646;}
+#lctr .square a:hover{color:#FFF;}
+#rctr{padding-top:80px;}
+#rctr >div:first-child{width:70%;}
+#rctr section{padding:1rem 1rem 0 1rem;}
+#rctr section content{display:flex;border-bottom:1px solid #13bee2;}
+#experience content >ul >li>div{background: #d9f5ff;padding:0.5rem 1rem;}
+#experience content >ul >li>div span{font-style: italic;}
+#contact content{border-bottom:none !important;}
+#contact a{color:#000;}
+#skills h5{color:#13bee2;}
+
+footer{
+    color:#FFF;
+}
+footer a{
+    color:#FFF;
+    padding:0.5rem;
+}
+#copyright{margin-top:1rem;color:#000;font-size:0.8rem;text-align: center;border-top: 1px solid #13bee2;}
+#nav{
+    position: fixed;
+    right:0;
+    top:80px;
+    height: calc(100% - 80px);
+    background: #105db3;
+    color: #FFF;
+    right:-10rem;
+    transition: right 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+#nav.active{
+    right: 0;  
+}
+#nav ul, #nav li{list-style: none;margin:0;padding:0;}
+#nav li a{
+    display:flex;
+color:#FFF;
+padding:0.5rem;
+    }
+#nav li a.active{
+box-shadow:0px 3px 0px #13bee2;
+}
+#nav .close{
+    color:#FFF;
+    margin-top: -0.5rem;
+    align-self: flex-end;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+#toggle{
+    padding:0 1rem;
+width: 4.5rem;
+    justify-content: center;
+}
+#toggle span{cursor:pointer; color:#FFF;font-size:1.5rem;font-weight: 100;}
+
+
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('../fonts/IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'IcoMoon-Free' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.7;
+    
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+    content: "\eab0";
+}
+
+.icon-linkedin:before {
+    content: "\eac9";
+}
+
+.icon-user-tie:before {
+    content: "\e976";
+}
+
+.icon-briefcase:before {
+    content: "\e9ae";
+}
+.icon-address-book:before {
+    content: "\e944";
+}
+.icon-library:before {
+    content: "\e921";
+}
+
+.icon-stack:before {
+    content: "\e92e";
+}
+.icon-download3:before {
+    content: "\e9c7";
+}
+.icon-circle-down:before {
+    content: "\ea43";
+}
+.icon-menu:before {
+    content: "\e9bd";
+}
+.icon-cross:before {
+    content: "\ea0f";
+}
+.icon-phone:before {
+    content: "\e942";
+}
+.icon-envelop:before {
+    content: "\e945";
+}
