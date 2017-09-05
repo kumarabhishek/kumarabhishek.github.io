@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
+    var landing = document.querySelector('#landing'), explore = document.querySelector('#explore');
+    /*
     var i, currentLink, sections = [], sectionDomList = document.querySelectorAll("#rctr section");
     sectionDomList.forEach(function(v){
         sections.push({id: v.id, ot: v.offsetTop});
@@ -51,26 +53,13 @@ document.addEventListener('DOMContentLoaded', function(){
                 highlightLink(sections[0].id);
             }
         }
-        
-        
-        /*
-        if(st > sb.offsetTop+sb.scrollHeight){
-            explore.classList.add('active');
-            lctr.classList.add('active');
-            landing.classList.remove('active');
-        }
-        else{
-            explore.classList.remove('active');
-            lctr.classList.remove('active');
-            landing.classList.add('active');
-        }*/
     });
-    
+    */
 
     document.querySelector('#landing .button.explore').addEventListener('click', function(){
         landing.classList.remove('active');
         explore.classList.add('active');
-        
+        /*
         sectionDomList = document.querySelectorAll("#rctr section");
         sectionDomList.forEach(function(v){
             sections.push({id: v.id, ot: v.offsetTop});
@@ -78,9 +67,21 @@ document.addEventListener('DOMContentLoaded', function(){
         sections.sort(function(a, b){
             return b.ot - a.ot;
         });
-        
+        */
     });
+    
+    //landing.classList.remove('active');
+    //explore.classList.add('active');
 
+    document.querySelector('#nav a[href="'+(location.hash || '#summary')+'"]').classList.add('active');
+    document.querySelectorAll('#nav a').forEach(function(item){
+        item.addEventListener('click', function(e){
+            var curActive = document.querySelector('#nav a.active');
+            curActive && curActive.classList.remove('active');
+            item.classList.add('active');
+        });
+    })
+    /*
     function toggleNav(){
         document.querySelector('#nav').classList.toggle('active');
         document.querySelector('#toggle>span').classList.toggle('icon-menu');
@@ -88,4 +89,5 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     document.querySelector('#toggle>span').addEventListener('click', toggleNav);
     smoothScroll.init({offset: 100});
+    */
 });

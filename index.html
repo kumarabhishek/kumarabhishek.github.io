@@ -9,7 +9,6 @@
 	<meta name="description" content="Personal website of Kumar Abhishek, Web Professional" />
 	<meta name="keywords" content="react, javascript, architect, website, ui, Nodejs, front end development, HTML, CSS, ReactJs, angular, angularjs 2"/>
 	<link rel="icon" type="image/png" sizes="16x16" href="css/pic.jpg" />
-	<!--link rel="manifest" href="manifest.json" /-->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,7 +21,14 @@
 		</div>
 		<div class="flex flex_c aic jcc">
 			<a class="email" href="mailto:kumarabhishek.opensource@gmail.com">kumarabhishek.opensource@gmail.com</a>
-			<a class="button explore flex asc" data-scroll href="#summary"><span>Explore</span><span class="bouncing icon icon-circle-down"></span></a>
+			<div class="btn_ctr flex">
+				<a id="download" class="afc button flex" data-scroll href="downloads/cv_kumarabhishek.pdf" target="_blank">
+					<span>Download CV</span><span class="icon icon-download3 mr_0_5r"></span>
+				</a>
+				<a class="button explore flex asc" data-scroll href="#summary">
+					<span>Explore</span><span class="bouncing icon icon-circle-down"></span>
+				</a>
+			</div>
 		</div>
 	</div>
 	<div id="explore" class="">
@@ -34,19 +40,38 @@
 				<span class="flex aic"><a data-scroll class="name" href="">KUMAR ABHISHEK</a></span>
 				<span><a class="email" href="mailto:kumarabhishek.opensource@gmail.com">kumarabhishek.opensource@gmail.com</a></span>
 			</div>
-			<div id="toggle" class="flex aic"><span class="flex aic icon icon-menu"></span></div>
 		</div>
-		<div id="nav">
-			<ul>
-				<li><a data-scroll href="#summary">Summary</a></li>
-				<li><a data-scroll href="#experience">Experience</a></li>
-				<li><a data-scroll href="#education">Education</a></li>
-				<li><a data-scroll href="#skills">Skills</a></li>
-				<li><a data-scroll href="#contact">Contact</a></li>
-			</ul>
-		</div>
+		
 		<div id="rctr" class="flex flex_1">
-			<div class="flex flex_1 flex_c">
+			<div id="nav">
+				<ul>
+					<li>
+						<a data-scroll href="#summary">
+							<span class="icon icon-user-tie"></span>
+							<span class="">Summary</span>
+						</a>
+					</li>
+					<li>
+						<a data-scroll href="#experience">
+							<span class="icon icon-briefcase"></span>
+							<span class="">Experience</span>
+						</a>
+					</li>
+					<li>
+						<a data-scroll href="#education">
+							<span class="icon icon-library"></span>
+							<span class="">Education</span>
+						</a>
+					</li>
+					<li>
+						<a data-scroll href="#skills">
+							<span class="icon icon-stack"></span>
+							<span class="">Skills</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="ctr flex flex_1 flex_c">
 				<section id="summary">
 					<h3><span class="icon icon-user-tie"></span>Summary</h3>
 					<content>
@@ -206,20 +231,23 @@ with a B.E degree in Information Science and Engineering.</li>
 					<h3><span class="icon icon-address-book"></span>Contact</h3>
 					<content>
 						<ul>
+							<li><a href="https://www.google.co.in/maps/place/Bengaluru,+Karnataka"><span class="icon icon-location"> </span><span>Bangalore, India</span></a></li>
 							<li><a href="tel:+919886283733"><span class="icon icon-phone"> </span><span>+919886283733</span></a></li>
 							<li><a href="mailto:kumarabhishek.opensource@gmail.com"><span class="icon icon-envelop"> </span><span>kumarabhishek.opensource@gmail.com</span></a></li>
 							<li><a href="https://github.com/kumarabhishek" target="_blank"><span class="icon icon-github"> </span><span>https://github.com/kumarabhishek</span></a></li>
 							<li><a href="https://in.linkedin.com/in/kumarabhishek" target="_blank"><span class="icon icon-linkedin"> </span><span>https://in.linkedin.com/in/kumarabhishek</span></a></li>
 						</ul>
+						<a class="afc button flex download" data-scroll href="downloads/cv_kumarabhishek.pdf" target="_blank">
+							<span>Download CV</span><span class="icon icon-download3 ml_0_5r"></span>
+						</a>
 					</content>
 				</section>
-				<footer class="flex flex_c jcc">
-					<a id="download" class="afc button flex" data-scroll href="downloads/cv_kumarabhishek.pdf" target="_blank"><span class="icon icon-download3 mr_0_5r"></span><span>Download CV</span></a>
-					<div id="copyright">&copy; 2017 Kumar Abhishek</div>
-				</footer>
 			</div>
 		</div>
 	</div>
+	<footer class="flex flex_c jcc">
+			<div id="copyright">&copy; 2017 Kumar Abhishek</div>
+		</footer>
 	<script type='text/javascript' src='js/smooth-scroll.min.js'></script>
 	<script type='text/javascript' src='js/main.js'></script>
 </body>
