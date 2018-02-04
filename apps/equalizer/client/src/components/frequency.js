@@ -21,7 +21,6 @@ export default class Frequency extends React.Component {
 		this.onMouseUp = this.onMouseUp.bind(this);
 		this.onTouchStart = this.onTouchStart.bind(this);
 		this.calculatePos = this.calculatePos.bind(this);
-		this.calculateValue = this.calculateValue.bind(this);
 	}
 
 	calculatePos(val) {
@@ -33,16 +32,6 @@ export default class Frequency extends React.Component {
 		this.rail.style.backgroundColor = perc2color(p);
 	}
 
-	calculateValue(y) {
-		const diffY = y - this.rail.children[0].getBoundingClientRect().top;
-		//
-		//const { min, max, step} = this.props;
-		//const percent = ((max-val))/(max - min);
-		//const pos = Math.floor(percent*this.rail.clientHeight) - 16;
-		//this.setState({value: val, pos});
-		this.setState({value: val, pos: diffY-16});
-	}
-
 	onKeyDown(e){
 		
 		const { keyCode } = e;
@@ -52,7 +41,6 @@ export default class Frequency extends React.Component {
 			case 38:
 			case 39:
 				//Up/Right Arrow - Decrease frequency
-				console.log('Up', id)
 				e.preventDefault();
 				curValue -= step;
 				curValue = curValue < min ? min : curValue;
@@ -72,10 +60,6 @@ export default class Frequency extends React.Component {
 	onMouseDown(e) {
 		document.addEventListener('mousemove', this.onMouseMove);
 		document.addEventListener('mouseup', this.onMouseUp);
-		this.ismoving = true;
-		this.shiftY = e.clientY - this.rail.children[0].getBoundingClientRect().top;
-
-		console.log('onMouseDown:', e, this.shiftY);
 	}
 
 	onMouseUp(e) {
@@ -83,13 +67,12 @@ export default class Frequency extends React.Component {
 		document.removeEventListener('mousemove', this.onMouseMove);
 		document.removeEventListener('mouseup', this.onMouseUp);
 		this.ismoving = false;
-		//console.log('onMouseUp:', e);
 	}
 
 	onMouseMove(e) {
 		e.preventDefault();
 		const r = this.rail.getBoundingClientRect();
-		let diffY = e.clientY - r.top;// + this.shiftY;
+		let diffY = e.clientY - r.top;
 		console.log(diffY, r.height);
 		if(diffY >= 0 && diffY <= r.height+16){
 			const { min, max, step, id, onChange} = this.props;
@@ -160,9 +143,6 @@ export default class Frequency extends React.Component {
 						style: {marginTop: this.state.pos},
 						onKeyDown: this.onKeyDown,
 						onMouseDown: this.onMouseDown,
-						//onMouseUp: this.onMouseUp,
-						//onMouseMove: this.onMouseMove,
-						//onTouchStart: this.onTouchStart
 					},
 					this.state.value
 				),

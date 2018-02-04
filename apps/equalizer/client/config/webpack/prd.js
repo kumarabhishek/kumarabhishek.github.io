@@ -28,13 +28,6 @@ module: {
 		}
 	]
 },
-/* resolve: {
-	extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx', '.css', '.png', '.svg'],
-	modules: [
-			path.resolve(__dirname, '../../'),
-			path.resolve(__dirname, '../../../node_modules')
-	],
-},*/
 plugins: [
 	new HtmlWebpackPlugin({
 		title: 'React Music Equalizer | v1.0.0',

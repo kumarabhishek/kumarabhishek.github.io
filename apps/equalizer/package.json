@@ -16,9 +16,7 @@
     "prebuild": "rimraf client/build/*",
     "build": "npm run build:prd",
     "postbuild": "babel client/src --out-dir client/build --copy-files --ignore index.html --minified --source-maps && npm run serve:prd",
-    "serve:prd": "node server",
-    "push:gl": "git push gitlab master",
-    "push:hr": "git push heroku master"
+    "serve:prd": "node server"
   },
   "keywords": [
     "react.js",
