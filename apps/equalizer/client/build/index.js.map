@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["App","ReactDOM","render","React","createElement","document","body"],"mappings":"AAAA,MAAOA,IAAP,KAAgB,qBAAhB,CAEAC,SAASC,MAAT,CAAgBC,MAAMC,aAAN,CAAoBJ,GAApB,CAAhB,CAA0CK,SAASC,IAAnD","file":"index.js","sourcesContent":["import App from './components/app.js';\n\nReactDOM.render(React.createElement(App), document.body);"]}
