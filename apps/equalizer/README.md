@@ -1,5 +1,7 @@
 # React Music Equalizer
 
+## Live Demo:[ https://kumarabhishek.github.io/apps/equalizer/client/build/](https://kumarabhishek.github.io/apps/equalizer/client/build/)
+
 ## Introduction
 
 Demo project to showcase ES6 Modules + Express.js + React.js based web application. It is about music equalizer UI component having various features explained in next section.
