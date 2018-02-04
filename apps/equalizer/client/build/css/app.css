@@ -1,8 +1,16 @@
 @import './global.css';
 
+header{
+    height: 3rem;
+    flex-shrink: 0;
+}
+
+header svg {
+    fill: #fff;
+}
+
 .content{
-    border-top: 0;
-    overflow: auto;
+    flex-shrink: 0;
 }
 
 .content > div:first-child{
