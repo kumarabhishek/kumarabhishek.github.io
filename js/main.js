@@ -24,9 +24,9 @@ function sendMail(e) {
 */
 function init() {
     // document.querySelector('#contactme form').addEventListener('submit', sendMail);
-    requestAnimationFrame(function () {
+    setTimeout(function () {
         document.body.classList.remove('opacity_0');
-    });
+    }, 300);
     var footer = document.querySelector('#copyright');
     footer.innerHTML = '© ' + (new Date()).getFullYear() + ' Kumar Abhishek';
     var scrolled = false;
