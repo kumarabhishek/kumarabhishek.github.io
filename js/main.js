@@ -33,13 +33,13 @@ function init() {
     document.addEventListener('scroll', function (e) {
         var i, node, st = document.documentElement.scrollTop;
         //console.log(document.documentElement.scrollTop);
-        if (st > 176) {
+        if (st > 192) {
             document.querySelector('#landing').classList.add('scrolled');
 
             var a = document.querySelector('.scrolled .square');
             var h = a.clientHeight || a.scrollHeight;
             document.querySelector('.scrolled #padder').style.height = 'calc(12rem + ' + h + 'px)';
-            !scrolled && window.scrollTo(0, 177);
+            !scrolled && window.scrollTo(0, 193);
             scrolled = true;
         } else {
             scrolled = false;

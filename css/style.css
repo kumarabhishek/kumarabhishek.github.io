@@ -135,6 +135,7 @@ h5 {
     padding: 0.125rem 1rem;
     border-radius: 1rem;
     flex-wrap: wrap;
+    margin-top: 0.5rem;
 }
 
 .button {
@@ -225,8 +226,18 @@ h3 span {
 
 .name,
 .name:hover {
+    line-height: 1;
     color: #fff;
     font-size: 1.6rem;
+}
+
+.mobile {
+    line-height: 1;
+    color: #830236;
+    font-size: 0.85rem;
+    background: #fff;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
 }
 
 .email {
@@ -329,7 +340,7 @@ footer{
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     flex-shrink: 0;
 }
 
