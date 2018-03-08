@@ -1,29 +1,22 @@
-/*
-function sendMail(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var token = '6af30e30-4b21-40fa-b5b6-c5577e0d584b';
-    var to = 'kr.abhishek@yahoo.com';
-    var name = e.target[0].value;
-    var email = e.target[1].value;
-    var subject = 'Enquiry: ' + email;
-    var msg = e.target[2].value.replace(/\n/g, '<br/>');
-    
-    
-    Email.send(name + '<' + email + '>',
-        to,
-        subject,
-        msg,
-        {
-            token: token,
-            callback: function (message) {
-                console.log(message);
+function registerSW() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (reg) {
+            if (reg.installing) {
+                // console.log('Service worker installing');
+            } else if (reg.waiting) {
+                // console.log('Service worker installed');
+            } else if (reg.active) {
+                // console.log('Service worker active');
             }
+        }).catch(function (error) {
+            // registration failed
+            // console.log('Registration failed with ' + error);
         });
+    }
 }
-*/
+
 function init() {
-    // document.querySelector('#contactme form').addEventListener('submit', sendMail);
+    registerSW();
     setTimeout(function () {
         document.body.classList.remove('opacity_0');
     }, 300);
@@ -32,7 +25,6 @@ function init() {
     var scrolled = false;
     document.addEventListener('scroll', function (e) {
         var i, node, st = document.documentElement.scrollTop;
-        //console.log(document.documentElement.scrollTop);
         if (st > 192) {
             document.querySelector('#landing').classList.add('scrolled');
 
