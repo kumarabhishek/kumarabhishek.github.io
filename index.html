@@ -11,6 +11,7 @@
 	/>
 	<link defer href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
 	<link rel="icon" type="image/png" sizes="16x16" href="css/ka.jpg" />
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/pell/dist/pell.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -247,17 +248,20 @@
 
 				<section id="contactme" class="flex">
 
-					<form class="hide flex flex_c flex_1" role="form" aria-label="contact form">
+					<form class="flex flex_c flex_1" role="form" aria-label="contact form">
 						<h4>CONTACT ME</h4>
 						<div class="row flex">
-							<input type="text" id="name" required="" aria-invalid="false" name="Name" value="" class="flex_1" placeholder="Name" data-aid="nameField">
-							<input type="text" id="email" required="" aria-invalid="false" name="Email" value="" class="flex_1" placeholder="Email" data-aid="emailField" />
+							<div id="status"></div>
+							<input type="hidden" name="apikey" value="1293063a-119e-4aaf-bf2c-713c19600311" />
+							<input type="hidden" name="to" value="kr.abhishek@yahoo.com" />
+							<input type="hidden" name="isTransactional" value="true" />
+							<input type="text" id="name" required="" aria-invalid="false" name="fromName" value="" class="flex_1" placeholder="Name" data-aid="nameField">
+							<input type="text" id="email" required="" aria-invalid="false" name="from" value="" class="flex_1" placeholder="Email" data-aid="emailField" />
+							<input type="hidden" id="subject" name="subject" value="" class="flex_1" placeholder="Subject" data-aid="subjectField" />
 						</div>
-						<div>
-							<textarea placeholder="Message" name="Message" class="flex_1 cf1fieldMessage" data-aid="messageField" id="comp-it43dhlqfieldMessage"></textarea>
-
-						</div>
-						<button type="submit" id="comp-it43dhlqsubmit" class="cf1submit mar_r">Send</button>
+						<div id="editor" placeholder="Message" class="flex_1" value="Sample html message"></div>
+						<input id="message" type="hidden" name="bodyHtml" />
+						<button type="submit" id="send" class="mar_r">Send</button>
 						<div aria-live="polite" class="cf1_success cf1notifications" id="comp-it43dhlqnotifications"></div>
 					</form>
 					<div class="flex flex_c flex_1">
@@ -302,6 +306,7 @@
 		<div id="copyright">&copy; 2017 Kumar Abhishek</div>
 	</footer>
 	<script type='text/javascript' src='js/main.js'></script>
+	<script src="https://unpkg.com/pell" defer></script>
 </body>
 
 </html>

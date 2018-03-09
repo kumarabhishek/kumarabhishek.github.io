@@ -163,7 +163,7 @@ h5 {
 }
 
 .title a:hover svg{
-    fill: #422f37;
+    fill: #27191f;
 }
 
 .download,
@@ -458,7 +458,7 @@ section li{
 }
 
 #contactme a:hover svg{
-    fill: #7c2338;
+    fill: #27191f;
 }
 
 #contactme h4{
@@ -466,10 +466,9 @@ section li{
     
 }
 
-#contactme div{
+#contactme .row{
     display: flex;
     flex-wrap: wrap;
-    margin-right: 1rem;
 }
 
 
@@ -483,12 +482,27 @@ section li{
     margin-bottom: 0.5rem;
     flex: 1;
     background: none;
-    background: #4e3a43;
+    background: #fff;
     outline: none;
-    color: #fff;
+    font-family: quicksand;
     margin-right: 1rem;
 }
 
+#status {
+    width: 100%;
+    margin: 0.5rem 1rem 0.5rem 0;
+}
+
+#status.success {
+    background: #91f992;
+    padding: 0.125;
+}
+
+#status.error {
+    background: #91f992;
+    padding: 0.125;
+}
+/*
 #contactme textarea{
     padding: 0.5rem;
     resize: none;
@@ -500,32 +514,48 @@ section li{
     color: #fff;
     margin-right: 1rem;
 }
+*/
 
 #contactme textarea:focus, #contactme input:focus{
-    background: #4e3a43;
     border: none;
 }
 
 #contactme button{
     margin-top: 0.5rem;
     width: 5rem;
-    background: #fff;
+    background: #27191f;
     border: 0;
     padding: 0.5rem;
-    color: #7c2338;
+    color: #fff;
     transition: all 200ms ease;
     border-radius: 2rem;
     cursor: pointer;
 }
 
 #contactme button:hover{
-    background: #7c2338;
-    color: #fff;
+    background: #563e48;
 }
 
 #contactme li{
     border: 0;
 }
+
+#editor{
+    /*margin: 0;*/
+    margin-right: 1rem;
+    background: #fff;
+}
+
+#editor .pell-actionbar{
+    display: none;
+}
+
+#editor .pell-content{
+    height: auto;
+    max-height: 10rem;
+}
+
+
 #skills h5 {
     color: #7e2335;
 }

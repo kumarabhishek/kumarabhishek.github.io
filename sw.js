@@ -32,7 +32,9 @@ self.addEventListener('install', function(event) {
           let responseClone = response.clone();
           
           caches.open('v1').then(function (cache) {
-            cache.put(event.request, responseClone);
+            if(event.request.method === 'GET'){
+              cache.put(event.request, responseClone);
+            }
           });
           return response;
         }).catch(function () {
