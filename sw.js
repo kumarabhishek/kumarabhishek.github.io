@@ -1,9 +1,11 @@
+var __version__ = 'v1';
+
 self.addEventListener('install', function(event) {
+    self.skipWaiting();
     event.waitUntil(
-      caches.open('v1').then(function(cache) {
+      caches.open(__version__).then(function(cache) {
         return cache.addAll([
           '/',
-          '/index.html',
           '/css/style.css',
           '/js/main.js',
           '/css/icon1.png',
@@ -31,7 +33,7 @@ self.addEventListener('install', function(event) {
           // and serve second one
           let responseClone = response.clone();
           
-          caches.open('v1').then(function (cache) {
+          caches.open(__version__).then(function (cache) {
             if(event.request.method === 'GET'){
               cache.put(event.request, responseClone);
             }
