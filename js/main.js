@@ -74,17 +74,8 @@ function registerSW() {
 
 function init() {
     registerSW();
-    editor = pell.init({
-        element: document.getElementById('editor'),
-        onChange: function (content) {
-            document.querySelector('#message').value = content;
-        },
-        actions: []
-    });
-    document.querySelector('#contactme form').addEventListener('submit', sendMail);
     setTimeout(function () {
         document.body.classList.remove('opacity_0');
-        
     }, 300);
     var footer = document.querySelector('#copyright');
     footer.innerHTML = '© ' + (new Date()).getFullYear() + ' Kumar Abhishek';
@@ -105,6 +96,16 @@ function init() {
             document.querySelector('#padder').style.height = '1rem';
         }
     });
+    try {
+        editor = pell.init({
+            element: document.getElementById('editor'),
+            onChange: function (content) {
+                document.querySelector('#message').value = content;
+            },
+            actions: []
+        });
+        document.querySelector('#contactme form').addEventListener('submit', sendMail);
+    } catch(e){}
 }
 
 

@@ -1,4 +1,4 @@
-var __version__ = 'v1.0.5';
+var __version__ = 'v1.0.6';
 var __CACHED_URLS__ = [
   '/',
   '/css/style.css',
@@ -25,7 +25,7 @@ var __CACHED_URLS__ = [
     event.waitUntil(
       caches.keys().then(function(keyList) {
         return Promise.all(keyList.map(function(key) {
-          if(key !== __version__){
+          if(__version__.indexOf(key) === -1){
             caches.delete(key);
           }
         }));
