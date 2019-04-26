@@ -8,7 +8,6 @@ function sendMail(e) {
     var status = document.querySelector('#status');
     status.classList.add('success');
     status.classList.add('error');
-    //console.log('sendMail', e.target.submit);
     document.querySelector('#subject').value = 'Enquiry: ' + document.querySelector('#email').value;
     btn.innerHTML = 'Sending...';
     btn.disabled = true;
@@ -48,8 +47,6 @@ function sendMail(e) {
         }
         btn.innerHTML = 'Send';
         btn.disabled = false;
-        
-      //alert(event.target.responseText);
     });
 
     // Define what happens in case of error
@@ -74,31 +71,12 @@ function registerSW() {
 
 function init() {
     registerSW();
-    setTimeout(function () {
-        document.body.classList.remove('opacity_0');
-    }, 300);
     var footer = document.querySelector('#copyright');
     footer.innerHTML = '© ' + (new Date()).getFullYear() + ' Kumar Abhishek';
-    var scrolled = false;
-    document.addEventListener('scroll', function (e) {
-        var i, node, st = document.documentElement.scrollTop;
-        if (st > 192) {
-            document.querySelector('#landing').classList.add('scrolled');
-
-            var a = document.querySelector('.scrolled .square');
-            var h = a.clientHeight || a.scrollHeight;
-            document.querySelector('.scrolled #padder').style.height = 'calc(12rem + ' + h + 'px)';
-            !scrolled && window.scrollTo(0, 193);
-            scrolled = true;
-        } else {
-            scrolled = false;
-            document.querySelector('#landing').classList.remove('scrolled');
-            document.querySelector('#padder').style.height = '1rem';
-        }
-    });
     try {
         editor = pell.init({
             element: document.getElementById('editor'),
+            placeholder: 'aaa',
             onChange: function (content) {
                 document.querySelector('#message').value = content;
             },

@@ -26,6 +26,9 @@ body {
     display: flex;
     flex-direction: column;
     transition: opacity 500ms ease;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
 * {
@@ -51,10 +54,6 @@ h4,
 h5 {
     padding: 0;
     margin: 0;
-}
-
-.opacity_0{
-    opacity: 0;
 }
 
 .center {
@@ -106,7 +105,7 @@ h5 {
 }
 
 .c_title{
-    color: #bda7b1;
+    color: #09c11a;
 }
 
 .bc_lg {
@@ -128,6 +127,10 @@ h5 {
     margin-right: 1rem;
 }
 
+.pad_t{
+    padding-top: 1rem;
+}
+
 .pad_l{
     padding-left: 1rem;
 }
@@ -143,11 +146,11 @@ h5 {
     align-items: center;
     font-weight: normal;
     color: #fff;
-    background: rgba(243, 5, 96, 0.3);
+    background: rgba(45, 165, 137, 0.75);
     padding: 0.125rem 0.85rem;
     border-radius: 1rem;
     flex-wrap: wrap;
-    margin-top: 0.25rem;
+    margin: 0.25rem;
 }
 
 .button {
@@ -174,6 +177,10 @@ h5 {
     stroke-width: 2px;
 }
 
+.title a:hover {
+    animation: none;
+}
+
 .title a:hover svg{
     fill: #27191f;
 }
@@ -193,8 +200,8 @@ section h3 {
     display: flex;
     font-weight: 100;
     font-size: 1.5rem;
-    border-left: 0.5rem solid #93415a;
-    color: #bda7b1;
+    border-left: 0.5rem solid #03c9fe;
+    color: #09c11a;
     padding-left: 0.5rem;
 }
 
@@ -203,18 +210,14 @@ h3 span {
 }
 
 @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
+    0% {
+        filter: drop-shadow(0 0 1px #00C9FF);
     }
     40% {
-        transform: translateY(-0rem);
+        filter: drop-shadow(0 0 1px #09c11a);
     }
-    60% {
-        transform: translateY(0.5rem);
+    100% {
+        filter: drop-shadow(0 0 1px #000);
     }
 }
 
@@ -227,30 +230,30 @@ h3 span {
 }
 
 .square.large .poster {
-    width: 7rem;
-    height: 7rem;
-    margin: 3rem 0 1rem 0;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem 0 1rem 0;
 }
 
 .square.large a {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .name,
 .name:hover {
-    line-height: 1;
     color: #fff;
     font-size: 1.6rem;
 }
 
 .mobile {
-    line-height: 1;
-    color: #830236;
+    line-height: 0.75;
+    color: #096c6f;
     font-size: 0.85rem;
     background: #fff;
-    padding: 0 1rem;
+    padding: 0.25rem 1rem;
     border-radius: 0.5rem;
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
+    cursor: default;
 }
 
 .email {
@@ -275,46 +278,22 @@ footer{
     filter: drop-shadow(0px 0 0.1rem #000) brightness(0.5);
 }
 
-.bnicons1{
-    height: 2rem;
-    transform: translate3d(6rem, 1.5rem, 0) rotateZ(0);
-}
-
-.bnicons2{
-    height: 2rem;
-    transform: translate3d(-6rem, 8rem, 0) rotateZ(0);
-}
-
-.bnicons3{
-    height: 2rem;
-    transform: translate3d(-6rem, 1.5rem, 0);
-}
-
-.bnicons4{
-    height: 2rem;
-    transform: translate3d(6rem, 7.5rem, 0) rotateZ(0deg);
-}
-
-.bnicons5{
-    transform: translate3d(0rem, -0.4rem, 0);
-    height: 1.6rem;
-    filter: brightness(1);
-}
-
 .square {
-    background: url('./bg.jpg');
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 1rem;
     padding-bottom: 0.5rem;
     flex-shrink: 0;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
-
-.info{
-    margin-top:-14rem;
-    z-index:1;
+.zindex-1 {
+    z-index: 1;
+}
+.gradient {
+    background: linear-gradient(to right, #92FE9D, #00C9FF);
 }
 
 .poster {
@@ -325,7 +304,6 @@ footer{
     box-sizing: border-box;
     background: url(ka.jpg) no-repeat;
     background-size: cover;
-    filter: drop-shadow(0 0 0.5rem #000);
     border: 0.5rem solid #fff;
 }
 
@@ -335,25 +313,6 @@ footer{
 
 #lctr .square a:hover {
     color: #FFF;
-}
-
-.scrolled .square{
-    position: fixed;
-    width:100%;
-    z-index: 1;
-    padding-top:0;
-}
-
-
-.scrolled img, .scrolled .poster {
-    display: none;
-}
-
-
-.scrolled #padder {
-    display:block;
-    flex-shrink: 0;
-    height:275px;
 }
 
 #rctr {
@@ -383,14 +342,27 @@ footer{
     flex-direction: column;
 }
 
+.tag {
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag span{
+    margin: 0 0.5rem 0.5rem 0;
+    border-radius: 1rem;
+    background: #beeffd;
+    padding: 0 0.5rem;
+}
+
 #experience > ul > li{
     border-left: 0 solid;
 }
 
-#experience > ul > li div {
+#experience .header{
     padding: 0 0.5rem;
     margin-bottom: 1.5rem;
-    background: #f9ecef;
+    background: #c7f9cd;
+    border-radius: 1rem;
 }
 
 section ul{
@@ -400,12 +372,18 @@ section ul{
 
 section li{
     list-style: none;
-    border-left: 2px double #e6b7c3;
+    border-left: 2px double #09c11a;
     padding-left: 0.5rem;
     margin-bottom: 1rem;
     margin-left: 0;
 }
 
+li h4 {
+    font-size: 1rem;
+    align-items: center;
+    display: flex;
+    padding-right: 1rem;
+}
 
 #experience {
     min-width: 88%;
@@ -413,7 +391,7 @@ section li{
 
 #contactme {
     padding: 1rem;
-    background: #422f37;
+    background: #434444;
     flex-wrap: wrap;
 }
 
@@ -430,7 +408,7 @@ section li{
 }
 
 #contactme h4{
-    color: #ab92a0;
+    color: #9d9d9e;
     
 }
 
@@ -478,7 +456,7 @@ section li{
 #contactme button{
     margin-top: 0.5rem;
     width: 5rem;
-    background: #27191f;
+    background: #000;
     border: 0;
     padding: 0.5rem;
     color: #fff;
@@ -488,15 +466,14 @@ section li{
 }
 
 #contactme button:hover{
-    background: #563e48;
+    background: #666;
 }
 
 #contactme li{
     border: 0;
 }
 
-#editor{
-    /*margin: 0;*/
+#editor {
     margin-right: 1rem;
     background: #fff;
 }
@@ -508,10 +485,11 @@ section li{
 #editor .pell-content{
     height: auto;
     max-height: 10rem;
+    min-height: 4rem;
 }
 
 #skills h5 {
-    color: #7e2335;
+    color: #0281a5;
 }
 
 #skills {
@@ -544,12 +522,11 @@ footer a {
 }
 
 #copyright {
-    color: #ab92a0;
+    color: #9d9d9e;
     font-size: 0.8rem;
     text-align: center;
-    background: #422f37;
+    background: #434444;
 }
-
 
 @media (max-width: 600px) {
     .scrolled .square img, .scrolled .poster{
@@ -565,11 +542,6 @@ footer a {
 
     #skills content ul{
         grid-template-columns: auto;
-    }
-
-    .square.large a{
-        font-size: 1.25rem;
-        font-weight: bold;
     }
 }
 

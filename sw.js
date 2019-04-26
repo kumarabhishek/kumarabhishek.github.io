@@ -1,15 +1,10 @@
-var __version__ = 'v1.0.6';
+var __version__ = 'v1.0.7';
 var __CACHED_URLS__ = [
   '/',
   '/css/style.css',
   '/js/main.js',
-  '/css/icon1.png',
-  '/css/icon2.png',
-  '/css/icon5.png',
-  '/css/icon6.png',
-  '/css/icon7.png',
   '/css/ka.jpg',
-  '/css/bg.jpg'
+  'https://unpkg.com/pell'
 ];
 
   self.addEventListener('install', function(event) {
