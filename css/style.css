@@ -20,7 +20,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-size: 14px;
     line-height: 1.7;
     min-width: 20rem;
     display: flex;
@@ -198,9 +197,9 @@ h5 {
 
 section h3 {
     display: flex;
-    font-weight: 100;
-    font-size: 1.5rem;
-    border-left: 0.5rem solid #03c9fe;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-left: 0.5rem solid #058bcb;
     color: #09c11a;
     padding-left: 0.5rem;
 }
@@ -219,6 +218,11 @@ h3 span {
     100% {
         filter: drop-shadow(0 0 1px #000);
     }
+}
+
+ul li {
+    list-style: none;
+    padding: 0 1rem;
 }
 
 .bouncing {
@@ -293,7 +297,7 @@ footer{
     z-index: 1;
 }
 .gradient {
-    background: linear-gradient(to right, #92FE9D, #00C9FF);
+    background: linear-gradient(to right, #54d161, #058bcb);
 }
 
 .poster {
@@ -359,24 +363,27 @@ footer{
 }
 
 #experience .header{
-    padding: 0 0.5rem;
+    padding: 0.5rem 1rem;
     margin-bottom: 1.5rem;
-    background: #c7f9cd;
+    background: #ccd8ce;
     border-radius: 1rem;
+    align-items: center;
+    font-weight: bolder;
 }
 
 section ul{
-    padding-left: 0.5rem;
+    padding-left: 1.5rem;
     list-style: none;
 }
 
-section li{
-    list-style: none;
-    border-left: 2px double #09c11a;
+section li li{    
+    list-style: square;
     padding-left: 0.5rem;
     margin-bottom: 1rem;
     margin-left: 0;
 }
+
+
 
 li h4 {
     font-size: 1rem;
@@ -391,7 +398,7 @@ li h4 {
 
 #contactme {
     padding: 1rem;
-    background: #434444;
+    background: #0b2f29;
     flex-wrap: wrap;
 }
 
@@ -490,6 +497,7 @@ li h4 {
 
 #skills h5 {
     color: #0281a5;
+    font-size: 1.25rem;
 }
 
 #skills {
@@ -525,7 +533,7 @@ footer a {
     color: #9d9d9e;
     font-size: 0.8rem;
     text-align: center;
-    background: #434444;
+    background: #0b2f29;
 }
 
 @media (max-width: 600px) {
