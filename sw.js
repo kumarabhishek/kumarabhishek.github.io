@@ -1,10 +1,10 @@
-var __version__ = 'v1.0.9';
+var __version__ = 'v2.0.0';
 var __CACHED_URLS__ = [
   '/',
   '/css/style.css',
   '/js/main.js',
-  '/css/ka.jpg',
-  'https://unpkg.com/pell'
+  '/css/ka.png',
+  '/favicon.ico',
 ];
 
   self.addEventListener('install', function(event) {
@@ -38,7 +38,7 @@ var __CACHED_URLS__ = [
           let responseClone = response.clone();
           
           caches.open(__version__).then(function (cache) {
-            if(event.request.method === 'GET'){
+            if(event.request.method === 'GET' && !event.request.url.match(/google/)){
               cache.put(event.request, responseClone);
             }
           });

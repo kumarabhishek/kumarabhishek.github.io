@@ -4,4 +4,4 @@
 
 Website [https://kumarabhishek.github.io](https://kumarabhishek.github.io)
 
-Personal webpage fo Kumar Abhishek
+Personal webpage of Kumar Abhishek
