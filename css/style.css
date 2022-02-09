@@ -23,13 +23,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'Quicksand', sans-serif;
     line-height: 2;
-    /*
-    background:
-		linear-gradient(90deg, #004556 21px, transparent 1%) center,
-		linear-gradient(#004556 21px, transparent 1%) center,
-		#00ccff;
-	background-size: var(--dot-space) var(--dot-space);
-    */
 }
 
 h1, h2, h3, h4, ul{margin: 0;}
