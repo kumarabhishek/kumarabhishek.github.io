@@ -1,4 +1,4 @@
-var __version__ = 'v2.0.1';
+var __version__ = 'v2.0.2';
 var __CACHED_URLS__ = [
   '/',
   '/css/style.css',
