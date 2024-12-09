@@ -116,8 +116,8 @@ aboutme {
     -webkit-mask-image: radial-gradient(ellipse 140% 140% at 50% 20%, #000 40%, #0000 54%);
     mask-image: radial-gradient(ellipse 140% 140% at 50% 20%, #000 40%, #0000 54%);
     background-image: url(./ka.png);
-    width: 19.25rem;
-	height: 17rem;
+    width: 28rem;
+	height: 28rem;
 	background-repeat: no-repeat;
 }
 
@@ -135,7 +135,7 @@ name {
 description {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     color: #333;
     padding-bottom: 1rem;
 }
@@ -153,6 +153,7 @@ description {
 .icon-services { background-image: url("./services.svg"); }
 .icon-ui { background-image: url("./ui.svg"); }
 .icon-regulatory { background-image: url("./regulatory.svg"); }
+.icon-adobe { background-image: url("./adobe.svg");}
 .icon-bazaarvoice { background-image: url("./bazaarvoice.svg");}
 .icon-cisco { background-image: url("./cisco.svg"); }
 .icon-eros { background-image: url("./eros.svg"); }
